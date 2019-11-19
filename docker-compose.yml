@@ -1,0 +1,8 @@
+version: "3"
+services:
+  jenkins_test:
+    image: jenkins_test:latest
+    ports:
+      - 8181
+    redis:
+      image: redis:later
