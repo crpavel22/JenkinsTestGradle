@@ -18,19 +18,19 @@ pipeline {
         }
         stage("Docker build"){
             steps {
-                sh "docker build -t pavel/JenkinsTest_1 ."
+                sh "docker build -t pavel/jenkins_test_1 ."
             }
         }
         stage("Docker push"){
             steps {
                 sh "docker login -u username -p password"
-                sh "docker push pavel/JenkinsTest_1"
+                sh "docker push pavel/jenkins_test_1"
             }
         }
 
         stage("Deploy to staging"){
             steps {
-                sh "docker run -d --rm -p 8765:8080 --name JenkinsTest_1 pavel/JenkinsTest_1"
+                sh "docker run -d --rm -p 8765:8080 --name jenkins_test_1 pavel/jenkins_test_1"
             }
         }
 
@@ -43,7 +43,7 @@ pipeline {
     }
     post {
         always {
-            sh "docker stop JenkinsTest_1"
+            sh "docker stop jenkins_test_1"
         }
     }
 }
