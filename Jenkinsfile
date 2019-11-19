@@ -30,7 +30,7 @@ pipeline {
 
         stage("Deploy to staging"){
             steps {
-                sh "docker run -d --rm -p 8765:8080 --name jenkins_test_1 pavel/jenkins_test_1"
+                sh "docker run -d --rm -p 8765:8181 --name jenkins_test_1 pavel/jenkins_test_1"
             }
         }
 
