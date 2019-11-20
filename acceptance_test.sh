@@ -1,2 +1,2 @@
 #!/bin/bash
-test true eq true
+test 3 -eq 3
