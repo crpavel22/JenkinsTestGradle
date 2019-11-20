@@ -23,7 +23,7 @@ pipeline {
         }
         stage("Docker push"){
             steps {
-                sh "docker login -u username -p password"
+                sh "docker login -u crpavel22 -p pyWzag-recmuh-7rybgo"
                 sh "docker push pavel/jenkins_test_1"
             }
         }
