@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class JenkinsTestGradleApplication {
 
 	public static void main(String[] args) {
+		System.out.println("Hola munod!!!!!!!");
 		SpringApplication.run(JenkinsTestGradleApplication.class, args);
 	}
 
