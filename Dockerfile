@@ -1,7 +1,7 @@
-FROM gradle:4.10.0-jdk8-alpine AS build
-COPY --chown=gradle:gradle . /home/gradle/src
-WORKDIR /home/gradle/src
-RUN gradle clean build --no-daemon
+#FROM gradle:4.10.0-jdk8-alpine AS build
+#COPY --chown=gradle:gradle . /home/gradle/src
+#WORKDIR /home/gradle/src
+#RUN gradle clean build --no-daemon
 
 FROM openjdk:8-jre-slim
 
