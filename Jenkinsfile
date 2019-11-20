@@ -30,7 +30,7 @@ pipeline {
 
         stage("Deploy to staging"){
             steps {
-                sh "docker run -d --rm -p 8765:8181 --name jenkins_test_1 crpavel22/jenkins_test_1:testJenkins"
+                sh "docker run -d --name testjkns --rm -p 8765:8181 crpavel22/jenkins_test_1"
             }
         }
 
@@ -43,7 +43,7 @@ pipeline {
     }
     post {
         always {
-            sh "docker stop testJenkins"
+            sh "docker stop testjkns"
         }
     }
 }
